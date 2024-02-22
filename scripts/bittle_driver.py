@@ -18,7 +18,7 @@ class Driver:
         rospy.Subscriber("/cmd_vel", Twist, self.callback)
         self.ser = serial.Serial(
         port=port,
-        baudrate=57600,
+        baudrate=115200, # the newest OpenCat code uses 115200
         parity=serial.PARITY_NONE,
         stopbits=serial.STOPBITS_ONE,
         bytesize=serial.EIGHTBITS,
